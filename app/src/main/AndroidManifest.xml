@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".telainicial">
+        <activity android:name=".telalogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".telainicial"/>
         <activity android:name=".telavenda" />
-        <activity android:name=".telalogin" />
         <activity android:name=".telapesquisa" />
         <activity android:name=".telaselecao" />
-        <activity android:name=".telapeca"></activity>
+        <activity android:name=".telapeca"/>
     </application>
 
 </manifest>
