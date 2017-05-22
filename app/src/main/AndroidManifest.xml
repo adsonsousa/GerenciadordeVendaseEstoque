@@ -19,7 +19,8 @@
         <activity android:name=".telavenda" />
         <activity android:name=".telalogin" />
         <activity android:name=".telapesquisa" />
-        <activity android:name=".telaselecao"></activity>
+        <activity android:name=".telaselecao" />
+        <activity android:name=".telapeca"></activity>
     </application>
 
 </manifest>
