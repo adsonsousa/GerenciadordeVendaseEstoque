@@ -1,17 +1,21 @@
 package br.com.planetasoft.gerenciadordevendaseestoque;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ButtonBarLayout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class telaselecao extends AppCompatActivity {
 
     ImageButton ibtnLg,ibtnSamsung,ibtnMotorola,ibtnLenovo,ibtnMicrosoft,ibtnNokia,ibtnTablet,ibtnApple,ibtnSony;
     Button btnVoltar;
+    String[] extras = new String[2];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +33,16 @@ public class telaselecao extends AppCompatActivity {
         ibtnSony = (ImageButton)findViewById(R.id.ibtnSony);
         btnVoltar =(Button)findViewById(R.id.btnVoltar);
 
+        extras[1] = getIntent().getExtras().getString("busca");
+
+
         ibtnLg.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "LG";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("LG","1");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -42,8 +51,10 @@ public class telaselecao extends AppCompatActivity {
         ibtnSamsung.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "Samsung";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Samsung","2");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -52,8 +63,10 @@ public class telaselecao extends AppCompatActivity {
         ibtnMotorola.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "Motorola";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Motorola","3");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -62,8 +75,10 @@ public class telaselecao extends AppCompatActivity {
         ibtnLenovo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "Lenovo";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Lenovo","4");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -72,8 +87,10 @@ public class telaselecao extends AppCompatActivity {
         ibtnMicrosoft.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "Microsoft";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Microsoft","5");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -82,8 +99,10 @@ public class telaselecao extends AppCompatActivity {
         ibtnNokia.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "Nokia";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Nokia","6");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -92,8 +111,10 @@ public class telaselecao extends AppCompatActivity {
         ibtnTablet.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "Tablet";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Tablet","7");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -102,8 +123,10 @@ public class telaselecao extends AppCompatActivity {
         ibtnApple.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "Apple";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Apple","8");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -112,8 +135,10 @@ public class telaselecao extends AppCompatActivity {
         ibtnSony.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                extras[0] = "Sony";
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Sony","9");
+                abrePeca.putExtra("marca",extras[0]);
+                abrePeca.putExtra("busca",extras[1]);
 
                 startActivity(abrePeca);
             }
@@ -122,10 +147,32 @@ public class telaselecao extends AppCompatActivity {
         btnVoltar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
-                abrePeca.putExtra("Sony","9");
-
-                startActivity(abrePeca);
+                if (extras[1].equals("ok")){
+                    finish();
+                }else{
+                    AlertDialog.Builder alerta = new AlertDialog.Builder(telaselecao.this);
+                    alerta.setTitle("Aviso!");
+                    alerta
+                            .setIcon(R.mipmap.ic_erro)
+                            .setMessage("Deseja realmente sair?")
+                            .setCancelable(false)
+                            .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Toast.makeText(getApplicationContext(),"Continuando a venda",Toast.LENGTH_LONG).show();
+                                }
+                            })
+                            .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent abreInicial = new Intent(telaselecao.this,telainicial.class);
+                                    startActivity(abreInicial);
+                                    finish();
+                                }
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+                }
             }
         });
 

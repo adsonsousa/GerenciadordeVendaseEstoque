@@ -26,7 +26,7 @@ public class telalogin extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Toast.makeText(getApplicationContext(), "Logado com sucesso!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Logado com sucesso!\nBoas Vendas!", Toast.LENGTH_LONG).show();
 
                 Intent abreInicial = new Intent(telalogin.this, telainicial.class);
                 startActivity(abreInicial);
