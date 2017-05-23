@@ -38,7 +38,7 @@ public class telapeca extends AppCompatActivity {
         marca = getIntent().getExtras().getString("marca");
         busca = getIntent().getExtras().getString("busca");
 
-        txtMarca.setText("Peças: " + marca);
+        txtMarca.setText("Marca Selecionada: " + marca);
 
         if (busca.equals("ok")){
             btnOk.setVisibility(View.INVISIBLE);
@@ -55,7 +55,7 @@ public class telapeca extends AppCompatActivity {
                     alerta.setTitle("Aviso!");
                     alerta
                             .setIcon(R.mipmap.ic_erro)
-                            .setMessage("Deseja realmente sair?")
+                            .setMessage("Venda em andamento deseja realmente sair?")
                             .setCancelable(false)
                             .setNegativeButton("Não", new DialogInterface.OnClickListener() {
                                 @Override

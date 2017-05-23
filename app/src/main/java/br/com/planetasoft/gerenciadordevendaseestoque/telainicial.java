@@ -49,7 +49,7 @@ public class telainicial extends AppCompatActivity {
                 alerta.setTitle("Aviso!");
                 alerta
                         .setIcon(R.mipmap.ic_erro)
-                        .setMessage("Deseja realmente sair do sistema?")
+                        .setMessage("Deseja sair do sistema?")
                         .setCancelable(false)
                         .setNegativeButton("Não", new DialogInterface.OnClickListener() {
                             @Override

@@ -26,7 +26,7 @@ public class telavenda extends AppCompatActivity {
         setContentView(R.layout.tela_venda);
 
         editCliente = (EditText)findViewById(R.id.editCliente);
-        editValor = (EditText)findViewById(R.id.editValor);
+
 
         cboxItem1 = (CheckBox)findViewById(R.id.cboxItem1);
         cboxItem2 = (CheckBox)findViewById(R.id.cboxItem2);

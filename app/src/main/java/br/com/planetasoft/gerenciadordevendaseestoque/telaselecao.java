@@ -154,7 +154,7 @@ public class telaselecao extends AppCompatActivity {
                     alerta.setTitle("Aviso!");
                     alerta
                             .setIcon(R.mipmap.ic_erro)
-                            .setMessage("Deseja realmente sair?")
+                            .setMessage("Venda andamento deseja realmente sair?")
                             .setCancelable(false)
                             .setNegativeButton("Não", new DialogInterface.OnClickListener() {
                                 @Override
