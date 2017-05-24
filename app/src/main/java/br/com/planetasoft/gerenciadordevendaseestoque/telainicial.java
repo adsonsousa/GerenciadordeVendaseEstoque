@@ -29,6 +29,7 @@ public class telainicial extends AppCompatActivity {
 
                 Intent abreSelecao = new Intent(telainicial.this, telaselecao.class);
                 abreSelecao.putExtra("busca","not");
+                finish();
                 startActivity(abreSelecao);
             }
         });
@@ -38,6 +39,7 @@ public class telainicial extends AppCompatActivity {
             public void onClick(View v){
                 Intent abreSelecao = new Intent(telainicial.this, telaselecao.class);
                 abreSelecao.putExtra("busca","ok");
+                finish();
                 startActivity(abreSelecao);
             }
         });
@@ -61,10 +63,13 @@ public class telainicial extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Toast.makeText(getApplicationContext(),"Até a proxima!",Toast.LENGTH_LONG).show();
-                                Intent sair = new Intent(Intent.ACTION_MAIN);
+                                Intent abreLogin = new Intent(telainicial.this, telalogin.class);
+                                finish();
+                                startActivity(abreLogin);
+                                /*Intent sair = new Intent(Intent.ACTION_MAIN);
                                 sair.addCategory(Intent.CATEGORY_HOME);
                                 sair.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                startActivity(sair);
+                                startActivity(sair);*/
                             }
                         });
                 AlertDialog alertDialog = alerta.create();

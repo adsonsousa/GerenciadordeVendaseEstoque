@@ -79,6 +79,7 @@ public class telapeca extends AppCompatActivity {
             public void onClick(View v) {
                 Intent abreVenda = new Intent(telapeca.this,telavenda.class);
                 abreVenda.putExtra("intem","venda");
+                finish();
                 startActivity(abreVenda);
             }
         });

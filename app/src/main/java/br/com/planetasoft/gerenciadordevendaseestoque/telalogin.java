@@ -19,6 +19,7 @@ public class telalogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_login);
 
+
         editUser = (EditText)findViewById(R.id.editUser);
         editPass = (EditText)findViewById(R.id.editPass);
         btnLogin = (Button)findViewById(R.id.btnLogin);
@@ -27,8 +28,8 @@ public class telalogin extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Toast.makeText(getApplicationContext(), "Logado com sucesso!\nBoas Vendas!", Toast.LENGTH_LONG).show();
-
                 Intent abreInicial = new Intent(telalogin.this, telainicial.class);
+                finish();
                 startActivity(abreInicial);
             }
         });

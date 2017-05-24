@@ -45,6 +45,7 @@ public class telavenda extends AppCompatActivity {
             public void onClick(View v) {
                 Intent abreSelecao = new Intent(telavenda.this, telaselecao.class);
                 abreSelecao.putExtra("busca","not");
+                finish(); //SERA QUE POSSO FECHAR ELA?
                 startActivity(abreSelecao);
             }
         });
@@ -54,6 +55,7 @@ public class telavenda extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Venda concluida, imprimindo...", Toast.LENGTH_LONG).show();
                 Intent abreInicio = new Intent(telavenda.this,telainicial.class);
+                finish(); //SERA QUE POSSO FECHAR ELA?
                 startActivity(abreInicio);
             }
         });
@@ -80,8 +82,8 @@ public class telavenda extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent abreInicio = new Intent(telavenda.this,telainicial.class);
-                                startActivity(abreInicio);
                                 finish();
+                                startActivity(abreInicio);
                             }
                         });
                 AlertDialog alertDialog = alerta.create();

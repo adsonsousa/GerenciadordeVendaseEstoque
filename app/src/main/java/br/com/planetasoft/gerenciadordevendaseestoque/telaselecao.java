@@ -43,7 +43,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -55,7 +55,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -67,7 +67,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -79,7 +79,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -91,7 +91,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -103,7 +103,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -115,7 +115,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -127,7 +127,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -139,7 +139,7 @@ public class telaselecao extends AppCompatActivity {
                 Intent abrePeca = new Intent(telaselecao.this,telapeca.class);
                 abrePeca.putExtra("marca",extras[0]);
                 abrePeca.putExtra("busca",extras[1]);
-
+                finish();
                 startActivity(abrePeca);
             }
         });
@@ -166,8 +166,8 @@ public class telaselecao extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     Intent abreInicial = new Intent(telaselecao.this,telainicial.class);
-                                    startActivity(abreInicial);
                                     finish();
+                                    startActivity(abreInicial);
                                 }
                             });
                     AlertDialog alertDialog = alerta.create();
